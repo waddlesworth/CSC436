@@ -1,0 +1,17 @@
+<div class = "row">
+    <div class = "col-xs-12">
+        <ul class = "list-group">
+            <li class = "list-group-item"> Name: {{card.name}}</li>
+            <li class = "list-group-item"> Company: {{card.company}}</li>
+            <li class = "list-group-item"> Title: {{card.title}}</li>
+            <li class = "list-group-item"> Phone : {{card.phone}}</li>
+            <li class = "list-group-item"> Email : {{card.email}}</li>
+            <li class = "list-group-item"> Web: {{card.web}}</li>
+            <li class = "list-group-item"> Address: {{card.address}}</li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <button class="btn btn-primary" type="button" (click)="onEditCard()">Edit Card</button>
+    <button class="btn btn-primary" type="button" (click)="onDeleteCard()">Delete Card</button>
+</div>

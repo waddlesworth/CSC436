@@ -1,0 +1,30 @@
+<nav class = "navbar navbar-inverse">
+    <div class = "container-fluid">
+        <div class = "navbar-header">
+            <a routerLink= "/" class = "navbar-brand">BusinessCardApp</a>
+        </div>
+        <ul class = "nav navbar-nav">
+            <li routerLinkActive="active" *ngIf = "isAuthenticated"><a routerLink = '/cards'>Lists</a></li>
+            <li routerLinkActive="active" *ngIf = "isAuthenticated"><a routerLink = '/add'>New</a></li>
+            <li><a style="cursor: pointer;" (click)= "onSaveData()">Save Data</a></li>
+            <li><a style="cursor: pointer;" (click)= "onFetchData()">Fetch Data</a></li>
+            <li><a routerLink = '/webcam'>Camera</a>
+        </ul>
+        <form class = "navbar-form navbar-left" action ="/action_page.php">
+            <div class = "form-group">
+                <input type = "text" 
+                class = "form-control" 
+                placeholder = "Search">
+            </div>
+            <button class = "btn btn-default" type="submit">
+                <i class = "glyphicon glyphicon-search"></i>
+            </button>
+        </form>
+        <ul class = "nav navbar-nav navbar-right">
+            <li><a routerLink = '/auth'><span class = "glyphicon glyphicon-user"></span>  Sign Up</a></li>
+            <li><a routerLink = '/auth'><span class = "glyphicon glyphicon-log-in"></span>  Login</a></li>
+            <li *ngIf="isAuthenticated">
+                    <a style="cursor: pointer;" (click)="onLogout()">Logout</a>
+        </ul>
+    </div>
+</nav>

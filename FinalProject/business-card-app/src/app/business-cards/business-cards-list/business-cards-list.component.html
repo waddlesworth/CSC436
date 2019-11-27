@@ -1,0 +1,5 @@
+<app-business-card-item
+    *ngFor = "let cardEl of cards; let i = index"
+    [card] = "cardEl"
+    [index] = "i"
+    (click) = "onSelected(index)"></app-business-card-item>
